@@ -1,0 +1,545 @@
+@import "function";
+@import "mixin";
+@import "variables";
+
+// RESETS
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+ul {
+  list-style-type: none;
+}
+
+// =======
+body {
+  background-color: black;
+  color: whitesmoke;
+}
+h2 {
+  color: goldenrod;
+}
+/*##### for-phone-only ##########*/
+@media (max-width: 599px) {
+  header {
+    position: fixed;
+    top: 0;
+    z-index: 111;
+    width: 100%;
+    background: black;
+    padding: 14px 33px;
+    @include center-horizontally;
+    justify-content: space-around;
+
+    .hide-on-mobile {
+      display: none;
+    }
+
+    .logo {
+      max-width: 70px;
+    }
+
+    .icon-hamburger {
+      width: toRem(23);
+    }
+
+    // header mobile js
+    .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 11;
+      top: 0;
+      left: 0;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.97);
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .overlay a:hover,
+    .overlay a:focus {
+      color: #f1f1f1;
+    }
+
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
+  }
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+  main {
+    background-color: black;
+    color: whitesmoke;
+    padding: toRem(144) toRem(0) toRem(64) toRem(0);
+    text-align: center;
+
+    section + section {
+      padding-top: toRem(114);
+    }
+
+    .hero {
+      position: relative;
+
+      // hero bg
+      #myVideo {
+        position: absolute;
+        right: 0;
+        top: 0;
+        min-width: 100%;
+        min-height: 100%;
+      }
+
+      .content {
+        position: absolute;
+        top: 20px;
+        background: rgba(0, 0, 25, 0.4);
+        box-shadow: 3px 3px 33px 13px rgba(0, 0, 5, 0.4);
+        color: #f1f1f1;
+        width: 100%;
+        padding: 14px;
+        padding-top: 22px;
+      }
+
+      #myBtn {
+        width: 200px;
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        background: #000;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      #myBtn:hover {
+        background: #ddd;
+        color: black;
+      }
+
+      h1 {
+        margin-bottom: toRem(30);
+      }
+    }
+
+    .our-vision {
+      padding-top: 291px;
+
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+
+      /* Hide the images by default */
+      .mySlides1 {
+        display: none;
+      }
+
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      /* Position the "next button" to the right */
+      .prev {
+        left: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        background: rgba(0, 0, 25, 0.4);
+        box-shadow: 3px 3px 33px 13px rgba(1, 1, 66, 0.4);
+        // font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 30%;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 11px;
+        width: 11px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        margin-top: 21px;
+      }
+
+      .active,
+      .dot:hover {
+        background-color: #e70808;
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.8s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.2;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    }
+
+    .awards {
+      position: relative;
+
+      .text {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 25, 0.4);
+        box-shadow: 3px 3px 33px 13px rgba(0, 0, 5, 0.4);
+        width: 100%;
+        padding: 30px;
+        p {
+          font-weight: 500;
+          text-align: center;
+        }
+      }
+
+      h2 {
+        margin-bottom: toRem(32);
+      }
+
+      picture + picture {
+        margin-top: 32px;
+      }
+    }
+
+    .visits {
+      h2 {
+        margin-bottom: 32px;
+      }
+    }
+
+    .articals {
+      padding-left: 15px;
+      padding-right: 15px;
+      @include center-vertically;
+
+      h2 {
+        margin-bottom: 25px;
+      }
+
+      .item + .item {
+        margin-top: 22px;
+      }
+
+      .item {
+        padding: 21px;
+        border: 0.5px solid gray;
+        border-radius: 15px;
+
+        p {
+          margin-bottom: 21px;
+          line-height: 30px;
+        }
+
+        a {
+          color: goldenrod;
+        }
+      }
+    }
+
+    .location {
+      background-image: url(../assets/mobile/night-sky-left.png);
+      background-repeat: no-repeat;
+      .text {
+        padding-left: 54px;
+        padding-right: 54px;
+        margin-bottom: 32px;
+        background: rgba(0, 0, 10, 0.4);
+        box-shadow: 3px 3px 33px 13px rgba(0, 0, 5, 0.4);
+
+        h3 {
+          margin-bottom: 25px;
+        }
+
+        .icon-and-info {
+          @include center-horizontally;
+          justify-content: space-between;
+          opacity: 0.8;
+        }
+
+        .icon-and-info + .icon-and-info {
+          margin-top: 22px;
+        }
+      }
+
+      .google-map {
+        padding-bottom: 50%;
+        position: relative;
+      }
+
+      .google-map iframe {
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+      }
+    }
+
+    .they-said {
+      padding-left: 32px;
+      padding-right: 32px;
+
+      h2 {
+        margin-bottom: 32px;
+      }
+
+      .mySlides2 + .mySlides2 {
+        margin-top: 40px;
+      }
+
+      video {
+        border-radius: 9px;
+      }
+    }
+
+    .our-gouls {
+      padding-left: 15px;
+      padding-right: 15px;
+      @include center-vertically;
+
+      h2 {
+        margin-bottom: 25px;
+      }
+
+      p + p {
+        margin-top: 22px;
+      }
+
+      p {
+        line-height: 34px;
+      }
+    }
+  }
+
+  footer {
+    background: linear-gradient(180deg, rgb(1, 10, 12) 100%, rgb(0, 9, 12) 5%);
+    color: whitesmoke;
+    padding-top: toRem(30);
+    padding-bottom: toRem(34);
+    @include center-vertically;
+
+    .logo {
+      max-width: 90px;
+      margin-bottom: toRem(34);
+    }
+
+    .links {
+      @include center-vertically;
+      margin-bottom: toRem(34);
+
+      li + li {
+        margin-top: toRem(21);
+      }
+    }
+
+    .social-media {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: toRem(35);
+
+      li {
+        width: 90%;
+      }
+    }
+  }
+}
+
+/*############ for-tablet-portrait ##############*/
+@media (600px <= width <= 899px) {
+  header {
+    .icon-hamburger,
+    .overlay {
+      display: none;
+    }
+  }
+}
+
+/*############ for-tablet-landscape #############*/
+@media (900px <= width <= 1199px) {
+  header {
+    .icon-hamburger,
+    .overlay {
+      display: none;
+    }
+  }
+}
+
+/*############ for-desktop ###########*/
+@media (1200px <= width <= 1799px) {
+  header {
+    @include center-horizontally;
+    justify-content: space-around;
+    padding: 22px 120px 22px 120px;
+
+    .logo {
+      max-width: 90px;
+    }
+
+    .icon-hamburger,
+    .overlay {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      width: 45%;
+    }
+  }
+
+  main {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  footer {
+    .logo {
+      max-width: 120px;
+    }
+  }
+}
+/*############ for-big-desktop ##########*/
+@media (min-width: 1800px) {
+}
