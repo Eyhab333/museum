@@ -8,7 +8,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon-32x32.png"
+      href="../assets/favicon-32x32.png"
     />
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,18 +17,107 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="../style/normalize.css" />
+    <link rel="stylesheet" href="../style/style.css" />
     <style>
       body {
         font-family: "Cairo", sans-serif;
       }
+      main,
+      header {
+        background-color: transparent;
+        background-image: linear-gradient(180deg, #25012e 0%, #1c011d 100%);
+      }
+      .hero-resort {
+        background-image: url(../assets/mobile/bg-our-vision.png);
+        background-size: cover;
+        height: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h1 {
+        color: #79e1e8;
+        font-size: 3rem;
+        box-shadow: 3px 3px 290px 30px black;
+      }
+      .content {
+        padding-left: 24px;
+        padding-right: 24px;
+        background-color: transparent;
+        background-image: linear-gradient(180deg, #25012e 0%, #360438 100%);
+      }
+      h2 {
+        margin-bottom: 30px;
+      }
+      .content div + div {
+        margin-top: 80px;
+      }
+      .content p {
+        margin-top: 25px;
+      }
+      .prices {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      .prices h2 {
+        color: #ffc2e9;
+        font-size: 33px;
+      }
+      .prices p,
+      .prices h3 {
+        color: #79e1e8;
+        font-size: 23px;
+      }
+      .prices p {
+        opacity: 0.9;
+      }
+      .prices .item-price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .item-price + .item-price {
+        margin-top: 30px;
+      }
     </style>
-    <link rel="stylesheet" href="../style/normalize.css" />
-    <link rel="stylesheet" href="../style/style.css" />
-    <title>resort</title>
+    <title>المنتجع</title>
   </head>
   <body dir="rtl">
+    <header dir="rtl">
+      <div class="logo">
+        <img src="../assets/logo.png" alt="logo" />
+      </div>
+      <div class="icon-hamburger" onclick="openNav()">
+        <img src="../assets/icons/hamburger-gold.svg" alt="icon-hamburger" />
+      </div>
+
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <nav class="overlay-content">
+          <ul>
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li><a href="../pages/resort.htm">المنتجع</a></li>
+            <li><a href="../pages/visit.htm">خطط زيارتك</a></li>
+            <li><a href="../pages/plog.htm">المدونة</a></li>
+            <li><a href="../pages/who-are-we.htm">من نحن</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <ul class="hide-on-mobile">
+        <li><a href="../index.html">الرئيسية</a></li>
+        <li><a href="../pages/resort.htm">المنتجع</a></li>
+        <li><a href="../pages/visit.htm">خطط زيارتك</a></li>
+        <li><a href="../pages/plog.htm">المدونة</a></li>
+        <li><a href="../pages/who-are-we.htm">من نحن</a></li>
+      </ul>
+    </header>
     <main>
-      <section class="hero">
+      <section class="hero-resort">
         <h1>
           Resort <br />
           2023
@@ -36,68 +125,121 @@
       </section>
 
       <section class="content">
-        <h2>ما هي مميزات المنتجع</h2>
+        <h2>ما هي محتويات المنتجع</h2>
         <div class="cottage">
-          <picture>
-            <source media="(min-width: 900)" srcset="../assets/desktop/" />
-            <source media="(min-width: 600)" srcset="../assets/desktop/" />
-            <img src="../assets/mobile/" alt="" />
-          </picture>
           <div class="text">
             <h2>أكواخ ريفية</h2>
             <p></p>
           </div>
+          <picture>
+            <source
+              media="(min-width: 1200)"
+              srcset="../assets/desktop/cottage-1"
+            />
+            <source
+              media="(min-width: 900)"
+              srcset="../assets/tablet/landscape/cottage-1.jpeg"
+            />
+            <source
+              media="(min-width: 600)"
+              srcset="../assets/tablet/portrait/cottage-1.jpeg"
+            />
+            <img src="../assets/mobile/cottage-1.jpeg" alt="cottage" />
+          </picture>
         </div>
         <div class="games">
-          <picture>
-            <source media="(min-width: 900)" srcset="../assets/desktop/" />
-            <source media="(min-width: 600)" srcset="../assets/desktop/" />
-            <img src="../assets/mobile/" alt="" />
-          </picture>
           <div class="text">
             <h2>منطقة ألعاب متنوعة للأطفال</h2>
             <p></p>
           </div>
+          <picture>
+            <source
+              media="(min-width: 1200)"
+              srcset="../assets/desktop/games-1.jpeg"
+            />
+            <source
+              media="(min-width: 900)"
+              srcset="../assets/tablet/landscape/games-1"
+            />
+            <source
+              media="(min-width: 600)"
+              srcset="../assets/tablet/portrait/games-1.jpeg"
+            />
+            <img src="../assets/mobile/games-1.jpeg" alt="games" />
+          </picture>
         </div>
         <div class="party">
-          <picture>
-            <source media="(min-width: 900)" srcset="../assets/desktop/" />
-            <source media="(min-width: 600)" srcset="../assets/desktop/" />
-            <img src="../assets/mobile/" alt="" />
-          </picture>
           <div class="text">
             <h2>قسم خاص لحفلات الزفاف والتخرج</h2>
-            <p>
-              سواء كنتي تخططين لحفل زفافك او حفل تخرجك فهذا أنسب مكان تتمتعين
-              فيه بالخصوصية الكاملة
-            </p>
           </div>
+          <picture>
+            <source
+              media="(min-width: 1200)"
+              srcset="../assets/desktop/party-1.jpeg"
+            />
+            <source
+              media="(min-width: 900)"
+              srcset="../assets/tablet/landscape/party-1.jpeg"
+            />
+            <source
+              media="(min-width: 600)"
+              srcset="../assets/tablet/portrait/party-1.jpeg"
+            />
+            <img src="../assets/mobile/party-1.jpeg" alt="" />
+          </picture>
+          <p>
+            سواء كنتي تخططين لحفل زفافك او حفل تخرجك فهذا أنسب مكان تتمتعين فيه
+            بالخصوصية الكاملة
+          </p>
         </div>
         <div class="training">
-          <picture>
-            <source media="(min-width: 900)" srcset="../assets/desktop/" />
-            <source media="(min-width: 600)" srcset="../assets/desktop/" />
-            <img src="../assets/mobile/" alt="" />
-          </picture>
           <div class="text">
             <h2>قاعة للتدريب وإلقاء المحاضرات</h2>
             <p></p>
           </div>
+          <picture>
+            <source media="(min-width: 900)" srcset="../assets/desktop/" />
+            <source media="(min-width: 600)" srcset="../assets/tablet/" />
+            <img src="../assets/mobile/training-1.jpeg" alt="training" />
+          </picture>
         </div>
         <div class="green">
           <picture>
             <source media="(min-width: 900)" srcset="../assets/desktop/" />
-            <source media="(min-width: 600)" srcset="../assets/desktop/" />
+            <source media="(min-width: 600)" srcset="../assets/tablet/" />
             <img src="../assets/mobile/" alt="" />
           </picture>
           <div class="text">
-            <h2>قاعة للتدريب وإلقاء المحاضرات</h2>
+            <h2></h2>
             <p></p>
           </div>
         </div>
       </section>
 
-      <div class="prices"></div>
+      <div class="prices">
+        <h2>الأسعار</h2>
+        <div class="item-price">
+          <h3 class="item">زيارة المتحف</h3>
+          <p class="price">200SR</p>
+        </div>
+        <div class="item-price">
+          <h3 class="item">قسم الحفلات</h3>
+          <p class="price">300SR</p>
+        </div>
+        <div class="item-price">
+          <h3 class="item">الكوخ الريفي</h3>
+          <p class="price">130SR</p>
+        </div>
+        <div class="item-price">
+          <h3 class="item">قاعة التدريب</h3>
+          <p class="price">200SR</p>
+        </div>
+        <div class="item-price">
+          <h3 class="item">دخول المنتجع</h3>
+          <p class="price">15SR</p>
+        </div>
+      </div>
     </main>
+    <script src="../js/main.js"></script>
   </body>
 </html>
