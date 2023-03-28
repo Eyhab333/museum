@@ -49,11 +49,21 @@
       }
     </style>
     <link rel="stylesheet" href="./style/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/@splidejs/splide/dist/css/splide.min.css"
+    />
+    
+    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="./style/style.css" />
   </head>
 
   <body dir="rtl">
-    <header dir="rtl">
+    <header>
       <div class="logo">
         <img src="./assets/logo.png" alt="logo" />
       </div>
@@ -69,7 +79,6 @@
           <ul>
             <li><a href="./index.html">الرئيسية</a></li>
             <li><a href="./pages/resort.htm">المنتجع</a></li>
-            <li><a href="./pages/visit.htm">خطط زيارتك</a></li>
             <li><a href="./pages/plog.htm">المدونة</a></li>
             <li><a href="./pages/who-are-we.htm">من نحن</a></li>
           </ul>
@@ -97,142 +106,130 @@
         </div>
       </section>
 
-      <section class="our-vision">
-        <!-- Slideshow container -->
-        <div class="slideshow-container">
-          <!-- Full-width images with number and caption text -->
-          <div class="mySlides1 fade">
-            <div class="numbertext">1 / 2</div>
-            <img src="./assets/mobile/bg-our-vision.png" loading="lazy" />
-            <div class="text">
-              <h2 class="slide-heading">رسالتنا</h2>
-              <p class="slide-description">
-                تعزيز التراث الوطني للسعودية ونقله بين الأجيال ، والتعريف به على
-                المستوى العالمي ، وإجراء الدراسات والأبحاث وتنظيم الفعاليات
-                والأنشطة التراثية
-              </p>
-            </div>
-          </div>
-
-          <div class="mySlides1 fade">
-            <div class="numbertext">2 / 2</div>
-            <img src="./assets/mobile/bg-our-vision.png" loading="lazy" />
-            <div class="text">
-              <h2 class="slide-heading">رؤيتنا</h2>
-              <p class="slide-description">
-                أن نكون مصدر ومرجع معتمد وموثوق لحفظ ونشر التراث الوطني في
-                المملكة العربية السعودية وفي العالم
-              </p>
-            </div>
-          </div>
-
-          <!-- Next and previous buttons -->
-          <!-- <a class="prev" onclick="plusSlides(-1)">&#10095;</a> -->
-          <!-- <a class="next" onclick="plusSlides(1)">&#10094;</a> -->
-        </div>
-
-        <!-- The dots/circles -->
-        <div style="text-align: center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-        </div>
-      </section>
+      
 
       <section class="awards">
         <h2>إنجازات</h2>
-        <div class="container">
-          <picture>
-            <source
-              media="(min-width: 900px)"
-              srcset="./assets/desktop/award.jpg"
-            />
-            <source
-              media="(min-width: 600px)"
-              srcset="./assets/tablet/award.jpg"
-            />
-            <img src="./assets/mobile/award.jpg" alt="award" loading="lazy" />
-          </picture>
-
-          <picture>
-            <source
-              media="(min-width: 900px)"
-              srcset="./assets/desktop/award2.jpg"
-            />
-            <source
-              media="(min-width: 600px)"
-              srcset="./assets/tablet/award2.jpg"
-            />
-            <img src="./assets/mobile/award2.jpg" alt="award" loading="lazy" />
-          </picture>
-
-          <div class="text">
-            <p>جائزة أمير الرياض</p>
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <picture>
+                <source
+                  media="(min-width: 900px)"
+                  srcset="./assets/desktop/award.jpg"
+                />
+                <source
+                  media="(min-width: 600px)"
+                  srcset="./assets/tablet/award.jpg"
+                />
+                <img src="./assets/mobile/award.jpg" alt="award" loading="lazy" />
+              </picture>
+            </div>
+            <div class="carousel-item">
+              <picture>
+                <source
+                  media="(min-width: 900px)"
+                  srcset="./assets/desktop/award2.jpg"
+                />
+                <source
+                  media="(min-width: 600px)"
+                  srcset="./assets/tablet/award2.jpg"
+                />
+                <img src="./assets/mobile/award2.jpg" alt="award" loading="lazy" />
+              </picture>
+            </div>
           </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </section>
 
       <section class="visits">
         <h2>زيارات</h2>
-        <div class="container">
-          <div class="slideshow-container">
-            <div class="mySlides1">
-              <img
-                src="./assets/mobile/visit1.jpeg"
-                alt="visit"
-                loading="lazy"
-              />
-            </div>
 
-            <div class="mySlides1">
-              <img
-                src="./assets/mobile/visit2.jpeg"
-                alt="visit"
-                loading="lazy"
-              />
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <picture>
+                <source media="(min-width: 1800px)" srcset="./assets/desktop/v1.jpeg">
+                <source media="(min-width: 1200px)" srcset="./assets/desktop/v1.jpeg">
+                <source media="(min-width: 900px)" srcset="./assets/tablet/landscape/v1.jpeg">
+                <source media="(min-width: 600px)" srcset="./assets/tablet/portrait/visit1.jpeg">
+                <img src="./assets/mobile/visit1.jpeg" class="d-block w-100" alt="visit">
+              </picture>
             </div>
-
-            <div class="mySlides1">
-              <img
-                src="./assets/mobile/visit3.jpeg"
-                alt="visit"
-                loading="lazy"
-              />
+            <div class="carousel-item">
+              <picture>
+                <source media="(min-width: 1800px)" srcset="./assets/desktop/v2.jpeg">
+                <source media="(min-width: 1200px)" srcset="./assets/desktop/v2.jpeg">
+                <source media="(min-width: 900px)" srcset="./assets/tablet/landscape/v2.jpeg">
+                <source media="(min-width: 600px)" srcset="./assets/tablet/portrait/v2.jpeg">
+                <img src="./assets/mobile/visit2.jpeg" class="d-block w-100" alt="visit">
+              </picture>
             </div>
-
-            <div class="mySlides1">
-              <img
-                src="./assets/mobile/visit4.jpeg"
-                alt="visit"
-                loading="lazy"
-              />
+            <div class="carousel-item">
+              <picture>
+                <source media="(min-width: 1800px)" srcset="./assets/desktop/v3.jpeg">
+                <source media="(min-width: 1200px)" srcset="./assets/desktop/v3.jpeg">
+                <source media="(min-width: 900px)" srcset="./assets/tablet/landscape/v3.jpeg">
+                <source media="(min-width: 600px)" srcset="./assets/tablet/portrait/v3.jpeg">
+                <img src="./assets/mobile/visit3.jpeg" class="d-block w-100" alt="visit">
+              </picture>
             </div>
-
-            <div class="mySlides1">
-              <img
-                src="./assets/mobile/visit5.jpeg"
-                alt="visit"
-                loading="lazy"
-              />
+            <div class="carousel-item">
+              <picture>
+                <source media="(min-width: 1800px)" srcset="./assets/desktop/v4.jpeg">
+                <source media="(min-width: 1200px)" srcset="./assets/desktop/v4.jpeg">
+                <source media="(min-width: 900px)" srcset="./assets/tablet/landscape/v4.jpeg">
+                <source media="(min-width: 600px)" srcset="./assets/tablet/portrait/v4.jpeg">
+                <img src="./assets/mobile/visit4.jpeg" class="d-block w-100" alt="visit">
+              </picture>
             </div>
-
-            <div class="mySlides1">
-              <img
-                src="./assets/mobile/visit6.jpeg"
-                alt="visit"
-                loading="lazy"
-              />
+            <div class="carousel-item">
+              <picture>
+                <source media="(min-width: 1800px)" srcset="./assets/desktop/v5.jpeg">
+                <source media="(min-width: 1200px)" srcset="./assets/desktop/v5.jpeg">
+                <source media="(min-width: 900px)" srcset="./assets/tablet/landscape/v5.jpeg">
+                <source media="(min-width: 600px)" srcset="./assets/tablet/portrait/v5.jpeg">
+                <img src="./assets/mobile/visit5.jpeg" class="d-block w-100" alt="visit">
+              </picture>
             </div>
-
-            <div class="mySlides1">
-              <img
-                src="./assets/mobile/visit7.jpeg"
-                alt="visit"
-                loading="lazy"
-              />
+            <div class="carousel-item">
+              <picture>
+                <source media="(min-width: 1800px)" srcset="./assets/desktop/v6.jpeg">
+                <source media="(min-width: 1200px)" srcset="./assets/desktop/v6.jpeg">
+                <source media="(min-width: 900px)" srcset="./assets/tablet/landscape/v6.jpeg">
+                <source media="(min-width: 600px)" srcset="./assets/tablet/portrait/v6.jpeg">
+                <img src="./assets/mobile/visit6.jpeg" class="d-block w-100" alt="visit">
+              </picture>
+            </div>
+            <div class="carousel-item">
+              <picture>
+                <source media="(min-width: 1800px)" srcset="./assets/desktop/v7.jpeg">
+                <source media="(min-width: 1200px)" srcset="./assets/desktop/v7.jpeg">
+                <source media="(min-width: 900px)" srcset="./assets/tablet/landscape/v7.jpeg">
+                <source media="(min-width: 600px)" srcset="./assets/tablet/portrait/v7.jpeg">
+                <img src="./assets/mobile/visit7.jpeg" class="d-block w-100" alt="visit">
+              </picture>
             </div>
           </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </section>
+
 
       <section class="articals">
         <h2>أحدث المقالات</h2>
@@ -298,84 +295,57 @@
 
       <section class="they-said">
         <h2>قالوا عن المتحف</h2>
-        <div class="container">
-          <div class="slideshow-container">
-            <div class="mySlides2">
-              <video controls muted loop loading="lazy">
-                <source
-                  src="./assets/videos/they said/anzy.mp4"
-                  type="video/mp4"
-                />
-                Your browser does not support HTML5 video.
-              </video>
-            </div>
-
-            <div class="mySlides2">
-              <video controls muted loop loading="lazy">
-                <source
-                  src="./assets/videos/they said/hany.mp4"
-                  type="video/mp4"
-                />
-                Your browser does not support HTML5 video.
-              </video>
-            </div>
-
-            <div class="mySlides2">
-              <video controls muted loop loading="lazy">
-                <source
-                  src="./assets/videos/they said/snap.mp4"
-                  type="video/mp4"
-                />
-                Your browser does not support HTML5 video.
-              </video>
-            </div>
-
-            <div class="mySlides2">
-              <video controls controls muted loop loading="lazy">
-                <source
-                  src="./assets/videos/they said/b.mp4"
-                  type="video/mp4"
-                />
-                Your browser does not support HTML5 video.
-              </video>
-            </div>
-
-            <div class="mySlides2">
-              <video controls muted loop loading="lazy">
-                <source
-                  src="./assets/videos/they said/saud.mp4"
-                  type="video/mp4"
-                />
-                Your browser does not support HTML5 video.
-              </video>
-            </div>
+        
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
           </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <video src="./assets/videos/they-said/saud.mp4" class="d-block w-100"></video>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>الامير سعود الشعلان والامير نايف الشعلان</h5>
+              </div>
+            </div> 
+            <div class="carousel-item">
+              <video src="./assets/videos/they-said/b.mp4" class="d-block w-100"></video>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>الاعلامي ا/ اسامة العشماوي</h5>
+              </div>
+            </div>
+            
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
+
       </section>
 
-      <section class="our-gouls">
-        <h2>أهداف المتحف الإستراتيجية</h2>
-        <p>
-          حفظ وتوثيق التراث الوطني ورفده بالدراسات والأبحاث العلمية وتوفير
-          المصادر والمراجع التراثية
-        </p>
-        <p>
-          ترسبخ الثقافة التراثية في المجتمع وتعزيز الوعي بالقيم والعادات
-          والتقاليد السعودية الأصيلة
-        </p>
-        <p>
-          تعزيز تفاعل المجتمع مع تراثه الوطني وتعميق دوره في حفظ الهوية الوطنية
-          وتطوير أجندة تراثية لنشر التراث داخل وخارج المملكة
-        </p>
-      </section>
+
+
+
+      
+
+
     </main>
 
-    <footer dir="rtl">
+    <footer>
       <div class="logo">
         <img src="./assets/logo.png" alt="logo" />
       </div>
-      <ul dir="rtl" class="links">
-        <li><a target="_blank" href="./pages/privacy-policy.htm">الشروط والأحكام</a></li>
+      <ul class="links">
+        <li>
+          <a target="_blank" href="./pages/privacy-policy.htm"
+            >الشروط والأحكام</a
+          >
+        </li>
         <li><a href="./pages/terms-of-service.htm">سياسة الخصوصية</a></li>
       </ul>
       <ul class="social-media">
@@ -425,8 +395,19 @@
           ></a>
         </li>
       </ul>
+      <div class="text">
+        <p>جميع الحقوق محفوظة &copy;</p>
+        <p>متحف الضويحي 2021 - 2023</p>
+        <p>
+          برمجة وتطوير
+          <a href="https://ahabfadl.com" target="_blank" rel="noopener noreferrer"
+            >Ahab</a
+          >
+        </p>
+      </div>
     </footer>
 
     <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

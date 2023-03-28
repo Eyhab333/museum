@@ -157,7 +157,7 @@ h2 {
     text-align: center;
   }
   main section + section {
-    padding-top: 7.125rem;
+    margin-top: 7.125rem;
   }
   main .hero {
     position: relative;
@@ -196,100 +196,235 @@ h2 {
     margin-bottom: 1.875rem;
   }
   main .our-vision {
-    padding-top: 291px;
-    /* Slideshow container */
-    /* Hide the images by default */
-    /* Next & previous buttons */
-    /* Position the "next button" to the right */
-    /* On hover, add a black background color with a little bit see-through */
-    /* Caption text */
-    /* Number text (1/3 etc) */
-    /* The dots/bullets/indicators */
-    /* Fading animation */
-  }
-  main .our-vision .slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-  }
-  main .our-vision .mySlides1 {
-    display: none;
-  }
-  main .our-vision .prev,
-  main .our-vision .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-  }
-  main .our-vision .prev {
-    left: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  main .our-vision .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  main .our-vision .prev:hover,
-  main .our-vision .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  main .our-vision .text {
-    color: #f2f2f2;
-    background: rgba(0, 0, 25, 0.4);
-    box-shadow: 3px 3px 33px 13px rgba(1, 1, 66, 0.4);
-    padding: 8px 12px;
-    position: absolute;
-    top: 30%;
-    width: 100%;
-    text-align: center;
-  }
-  main .our-vision .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  main .our-vision .dot {
-    cursor: pointer;
-    height: 11px;
-    width: 11px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-    margin-top: 21px;
-  }
-  main .our-vision .active,
-  main .our-vision .dot:hover {
-    background-color: #e70808;
-  }
-  main .our-vision .fade {
-    animation-name: fade;
-    animation-duration: 1.8s;
-  }
-  @keyframes fade {
-    from {
-      opacity: 0.2;
-    }
-    to {
-      opacity: 1;
-    }
+    margin-top: 291px;
   }
   main .awards {
     position: relative;
+    padding-top: 291px;
+  }
+  main .awards .text {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 25, 0.4);
+    box-shadow: 3px 3px 33px 13px rgba(0, 0, 5, 0.4);
+    width: 100%;
+    padding: 30px;
+  }
+  main .awards .text p {
+    font-weight: 500;
+    text-align: center;
+  }
+  main .awards h2 {
+    margin-bottom: 2rem;
+  }
+  main .awards picture + picture {
+    margin-top: 32px;
+  }
+  main .visits {
+    border: 1px solid red;
+  }
+  main .visits h2 {
+    margin-bottom: 32px;
+  }
+  main .articals {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .articals h2 {
+    margin-bottom: 25px;
+  }
+  main .articals .item + .item {
+    margin-top: 22px;
+  }
+  main .articals .item {
+    padding: 21px;
+    border: 0.5px solid gray;
+    border-radius: 15px;
+  }
+  main .articals .item p {
+    margin-bottom: 21px;
+    line-height: 30px;
+  }
+  main .articals .item a {
+    color: goldenrod;
+  }
+  main .location {
+    background-image: url(../assets/mobile/night-sky-left.png);
+    background-repeat: no-repeat;
+  }
+  main .location .text {
+    padding-left: 54px;
+    padding-right: 54px;
+    margin-bottom: 32px;
+    background: rgba(0, 0, 10, 0.4);
+    box-shadow: 3px 3px 33px 13px rgba(0, 0, 5, 0.4);
+  }
+  main .location .text h3 {
+    margin-bottom: 25px;
+  }
+  main .location .text .icon-and-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0.8;
+  }
+  main .location .text .icon-and-info + .icon-and-info {
+    margin-top: 22px;
+  }
+  main .location .google-map {
+    padding-bottom: 50%;
+    position: relative;
+  }
+  main .location .google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+  main .they-said h2 {
+    margin-bottom: 32px;
+  }
+  main .our-gouls {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .our-gouls h2 {
+    margin-bottom: 25px;
+  }
+  main .our-gouls p + p {
+    margin-top: 22px;
+  }
+  main .our-gouls p {
+    line-height: 34px;
+  }
+}
+@media (max-width: 599px) {
+  footer {
+    background-color: transparent;
+    background-image: linear-gradient(180deg, rgb(0, 11, 14) 0%, rgb(0, 25, 34) 100%);
+    color: whitesmoke;
+    padding-top: 1.875rem;
+    padding-bottom: 2.125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .logo {
+    max-width: 90px;
+    margin-bottom: 2.125rem;
+  }
+  footer .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.125rem;
+  }
+  footer .links li + li {
+    margin-top: 1.3125rem;
+  }
+  footer .social-media {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.1875rem;
+    margin-bottom: 34px;
+  }
+  footer .social-media li {
+    width: 90%;
+  }
+}
+/*############ for-tablet-portrait ##############*/
+@media (600px <= width <= 899px) {
+  header .icon-hamburger,
+  header .overlay {
+    display: none;
+  }
+}
+/*############ for-tablet-landscape #############*/
+@media (900px <= width <= 1199px) {
+  header .icon-hamburger,
+  header .overlay {
+    display: none;
+  }
+}
+/*############ for-desktop ###########*/
+@media (1200px <= width <= 1799px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 22px 120px 22px 120px;
+  }
+  header .logo {
+    max-width: 90px;
+  }
+  header .icon-hamburger,
+  header .overlay {
+    display: none;
+  }
+  header ul {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+  }
+  main {
+    padding-left: 120px;
+    padding-right: 120px;
+    text-align: center;
+  }
+  main section + section {
+    margin-top: 7.125rem;
+  }
+  main .hero {
+    border: 1px solid transparent;
+    position: relative;
+    margin-bottom: 390px;
+  }
+  main .hero #myVideo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  main .hero .content {
+    position: absolute;
+    top: 20px;
+    background: rgba(0, 0, 25, 0.4);
+    box-shadow: 3px 3px 33px 13px rgba(0, 0, 5, 0.4);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 14px;
+    padding-top: 22px;
+  }
+  main .hero #myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  main .hero #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+  main .hero h1 {
+    margin-bottom: 1.875rem;
+  }
+  main .our-vision {
+    margin-top: 291px;
+  }
+  main .awards {
+    position: relative;
+    padding-top: 291px;
   }
   main .awards .text {
     position: absolute;
@@ -371,18 +506,8 @@ h2 {
     top: 0;
     position: absolute;
   }
-  main .they-said {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
   main .they-said h2 {
     margin-bottom: 32px;
-  }
-  main .they-said .mySlides2 + .mySlides2 {
-    margin-top: 40px;
-  }
-  main .they-said video {
-    border-radius: 9px;
   }
   main .our-gouls {
     padding-left: 15px;
@@ -400,10 +525,9 @@ h2 {
   main .our-gouls p {
     line-height: 34px;
   }
-}
-@media (max-width: 599px) {
   footer {
-    background: linear-gradient(180deg, rgb(1, 10, 12) 100%, rgb(0, 9, 12) 5%);
+    background-color: transparent;
+    background-image: linear-gradient(180deg, rgb(0, 11, 14) 0%, rgb(0, 25, 34) 100%);
     color: whitesmoke;
     padding-top: 1.875rem;
     padding-bottom: 2.125rem;
@@ -412,7 +536,7 @@ h2 {
     align-items: center;
   }
   footer .logo {
-    max-width: 90px;
+    max-width: 120px;
     margin-bottom: 2.125rem;
   }
   footer .links {
@@ -428,51 +552,21 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2.1875rem;
+    margin-bottom: 34px;
   }
   footer .social-media li {
     width: 90%;
   }
-}
-/*############ for-tablet-portrait ##############*/
-@media (600px <= width <= 899px) {
-  header .icon-hamburger,
-  header .overlay {
-    display: none;
-  }
-}
-/*############ for-tablet-landscape #############*/
-@media (900px <= width <= 1199px) {
-  header .icon-hamburger,
-  header .overlay {
-    display: none;
-  }
-}
-/*############ for-desktop ###########*/
-@media (1200px <= width <= 1799px) {
-  header {
+  footer .text {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    padding: 22px 120px 22px 120px;
   }
-  header .logo {
-    max-width: 90px;
-  }
-  header .icon-hamburger,
-  header .overlay {
-    display: none;
-  }
-  header ul {
-    display: flex;
-    justify-content: space-between;
-    width: 45%;
-  }
-  main {
-    padding-left: 120px;
-    padding-right: 120px;
-  }
-  footer .logo {
-    max-width: 120px;
+  footer .text p {
+    text-align: center;
   }
 }
-/*############ for-big-desktop ##########*//*# sourceMappingURL=style.css.map */
+/*############ for-big-desktop ##########*/
+ul {
+  padding-left: 0px;
+}/*# sourceMappingURL=style.css.map */
