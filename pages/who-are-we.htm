@@ -8,8 +8,20 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon-32x32.png"
+      href="../assets/favicon-32x32.png"
     />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/f165a59b56.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/normalize.css" />
+
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,6 +37,44 @@
     <title>عن المتحف</title>
   </head>
   <body dir="rtl">
+
+    <header>
+      <div class="logo">
+        <img src="../assets/logo.png" alt="logo" />
+      </div>
+      <div class="icon-hamburger" onclick="openNav()">
+        <img src="../assets/icons/hamburger-gold.svg" alt="icon-hamburger" />
+      </div>
+
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <nav class="overlay-content">
+          <ul>
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li><a href="../pages/resort.htm">المنتجع</a></li>
+            <!--
+            <li><a href="./pages/plog.htm">المدونة</a></li>
+-->
+            <li><a href="../pages/who-are-we.htm">من نحن</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <ul class="hide-on-mobile">
+        <li><a href="../index.html">الرئيسية</a></li>
+        <li><a href="../pages/resort.htm">المنتجع</a></li>
+
+        <!--
+        <li><a href="./pages/visit.htm">خطط زيارتك</a></li>
+        <li><a href="./pages/plog.htm">المدونة</a></li>
+-->
+
+        <li><a href="../pages/who-are-we.htm">من نحن</a></li>
+      </ul>
+    </header>
+
     <main>
       <section class="hero">
         <h1>عن المتحف</h1>
@@ -37,18 +87,18 @@
           معـتمـد من وزارة السياحة ، مـرخــص بــرقـــم | 0107 0504299219 |
           0548783739 حاصل على المركز الأول لجائزة جامعة المجمعة لخدمة المجتمع
         </p>
-        <h2>رسالتنا</h2>
+        <h2 style="margin-top: 90px;">رسالتنا</h2>
         <p>
           تعزيز التراث الوطني للسعودية ونقله بين الأجيال ، والتعريف به على
           المستوى العالمي ، وإجراء الدراسات والأبحاث وتنظيم الفعاليات والأنشطة
           التراثية
         </p>
-        <h2>رؤيتنا</h2>
+        <h2 style="margin-top: 60px;">رؤيتنا</h2>
         <p>
           أن نكون مصدر ومرجع معتمد وموثوق لحفظ ونشر التراث الوطني في المملكة
           العربية السعودية وفي العالم
         </p>
-        <section class="our-gouls">
+        <section style="margin-top: 90px;" class="our-gouls">
           <h2>أهداف المتحف الإستراتيجية</h2>
           <p>
             حفظ وتوثيق التراث الوطني ورفده بالدراسات والأبحاث العلمية وتوفير
@@ -65,5 +115,86 @@
         </section>
       </section>
     </main>
+
+    <footer>
+      <div class="logo">
+        <img src="../assets/logo.png" alt="logo" />
+      </div>
+      <ul class="links">
+        <li>
+          <a target="_blank" href="../pages/privacy-policy.htm"
+            >الشروط والأحكام</a
+          >
+        </li>
+        <!--   
+        <li><a href="./pages/terms-of-service.htm">سياسة الخصوصية</a></li>
+          -->
+      </ul>
+
+      <ul class="social-media">
+        <li class="twitter">
+          <a
+            href="https://twitter.com/DH_MUSEUM?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+        </li>
+        <li class="instagram">
+          <a
+            href="https://www.instagram.com/dh.museum/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </li>
+        <li class="youtube">
+          <a
+            href="https://www.youtube.com/channel/UC0kiPnZHjNfX61zTf6B6w5g"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </li>
+        <li class="tiktok">
+          <a
+            href="https://www.tiktok.com/@aldwihimuseum?lang=ar"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-tiktok"></i
+          ></a>
+        </li>
+        <li class="facebook">
+          <a target="_blank" href="https://www.facebook.com/soliman.aldwihi/"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+        </li>
+        <li class="pinterest">
+          <a
+            href="https://www.pinterest.com/soliman4137/_created/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-pinterest"></i
+          ></a>
+        </li>
+      </ul>
+      <div class="text">
+        <p>جميع الحقوق محفوظة &copy;</p>
+        <p>متحف الضويحي 2021 - 2024</p>
+
+        <!-- 
+        <p>
+          برمجة وتطوير
+          <a href="https://ahabfadl.com" target="_blank" rel="noopener noreferrer"
+            >Ahab</a
+          >
+        </p>
+        -->
+      </div>
+    </footer>
+
+
+    <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
