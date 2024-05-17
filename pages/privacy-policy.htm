@@ -9,7 +9,7 @@
       name="description"
       content="متحف ومنتجع الضويحي بالزلفي صداقة مع التراث رسالتنا تعزيز التراث الوطني للسعودية ونقله بين الأجيال والتعريف به على المستوى العالمي"
     />
-    <link rel="canonical" href="https://aldwihimuseum.com/" />
+    <link rel="canonical" href="https://adwihimuseum.com/" />
     <meta property="og:locale" content="en_US" />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <meta property="og:type" content="website" />
@@ -21,15 +21,25 @@
       property="og:description"
       content="متحف ومنتجع الضويحي بالزلفي صداقة مع التراث رسالتنا تعزيز التراث الوطني للسعودية ونقله بين الأجيال والتعريف به على المستوى العالمي"
     />
-    <meta property="og:url" content="https://aldwihimuseum.com/" />
+    <meta property="og:url" content="https://adwihimuseum.com/" />
     <meta property="og:site_name" content="متحف ومنتجع الضويحي بالزلفي" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon-32x32.png"
+      href="../assets/favicon-32x32.png"
     />
-
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/f165a59b56.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/normalize.css" />
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,11 +54,46 @@
     </style>
   </head>
   <body dir="rtl">
-    
+    <header>
+      <div class="logo">
+        <img src="../assets/logo.png" alt="logo" />
+      </div>
+      <div class="icon-hamburger" onclick="openNav()">
+        <img src="../assets/icons/hamburger-gold.svg" alt="icon-hamburger" />
+      </div>
+
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <nav class="overlay-content">
+          <ul>
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li><a href="../pages/resort.htm">المنتجع</a></li>
+            <!--
+            <li><a href="./pages/plog.htm">المدونة</a></li>
+-->
+            <li><a href="../pages/who-are-we.htm">من نحن</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <ul class="hide-on-mobile">
+        <li><a href="../index.html">الرئيسية</a></li>
+        <li><a href="../pages/resort.htm">المنتجع</a></li>
+
+        <!--
+        <li><a href="./pages/visit.htm">خطط زيارتك</a></li>
+        <li><a href="./pages/plog.htm">المدونة</a></li>
+-->
+
+        <li><a href="../pages/who-are-we.htm">من نحن</a></li>
+      </ul>
+    </header>
 
     <main>
       <h1>سياسة الخصوصية</h1>
-      <p>
+      <p style="margin-top: 60px;">
         احتراما لخصوصيتكم، سيسعى متحف الضويحي لتوضيح كيفية جمع البيانات الشخصية
         واستخدامها والكشف عنها ونقلها وتخزينها
       </p>
@@ -60,8 +105,8 @@
         يتعامل متحف الضويحي مع المراسلات والمواد التي يرفعها أو ينقلها عبر
         الإنترنت ، كمراسلات ومواد غير سرية وغير خاضعة لحقوق الملكية
       </p>
-      <h2>ما هي البيانات الشخصية الخاصة بك التي يجمعها متحف الضويحي؟</h2>
-      <p>
+      <h2 style="margin-top: 90px;">ما هي البيانات الشخصية الخاصة بك التي يجمعها متحف الضويحي؟</h2>
+      <p style="margin-top: 60px;">
         البيانات التي يقدمها المستخدم مباشرةً قد يزود الزائر متحف الضويحي من
         خلال الموقع ببياناته الشخصية التي قد تشمل الجوانب التالية: حجز موعد
         للزيارة البيانات المتعلقة باستخدام الموقع إضافةً إلى البيانات الشخصية
@@ -84,8 +129,8 @@
         (حسبما هو مسموحٌ به قانونًا) ودمجها مع البيانات الأخرى التي تُجمع عند
         زيارة متحف الضويحي
       </p>
-      <h2>كيف تُستخدم البيانات المتعلقة بك؟</h2>
-      <p>
+      <h2 style="margin-top: 90px;">كيف تُستخدم البيانات المتعلقة بك؟</h2>
+      <p style="margin-top: 60px;">
         يجوز لمتحف الضويحي استخدام البيانات الشخصية التي تجمع من خلال الموقع في
         الأغراض التالية: إدارة العلاقة بينك وبين متحف الضويحي دراسة أي طلب تقدمه
         من خلال موقع متحف الضويحي منع التهديدات الأمنية والاحتيال أو أي نشاط ضار
@@ -95,8 +140,8 @@
         القيام بجهود ترويجية شخصية الرد على أي استفسارات قد تطرحها غير ذلك بناءً
         على موافقتك
       </p>
-      <h2>ما هي الأطراف التي يكشف لها متحف الضويحي البيانات المتعلقة بك؟</h2>
-      <p>
+      <h2 style="margin-top: 90px;">ما هي الأطراف التي يكشف لها متحف الضويحي البيانات المتعلقة بك؟</h2>
+      <p style="margin-top: 60px;">
         يجوز لمتحف الضويحي الكشف عن البيانات الخاصة بك للجهات التالية فقط: مقدمو
         الخدمات – يجوز لمتحف الضويحي الكشف عن البيانات المتعلقة بك للشركات التي
         توفر الخدمات لها أو بالنيابة عنها، مثل الشركات التي تساعدها في عمليات
@@ -111,8 +156,8 @@
         الشركة أو لفرض هذا الالتزام عندما يكون الكشف عن البيانات مطلوبًا لحماية
         حقوق متحف الضويحي
       </p>
-      <h2>ما الذي يفعله متحف الضويحي لتأمين البيانات المتعلقة بك</h2>
-      <p>
+      <h2 style="margin-top: 90px;">ما الذي يفعله متحف الضويحي لتأمين البيانات المتعلقة بك</h2>
+      <p style="margin-top: 60px;">
         يتخذ متحف الضويحي إجراءات مادية وفنية معقولة لحماية البيانات التي يجمعها
         أثناء تقديمه للخدمات، ومع ذلك نشدد على عدم وجود أمن كامل بالنسبة لأي
         موقع إلكتروني أو نقل بيانات عبر الإنترنت أو نظام حاسوبي أو اتصال غير
@@ -133,6 +178,84 @@
       </p>
     </main>
 
-    
+    <footer>
+      <div class="logo">
+        <img src="../assets/logo.png" alt="logo" />
+      </div>
+      <ul class="links">
+        <li>
+          <a target="_blank" href="../pages/privacy-policy.htm"
+            >الشروط والأحكام</a
+          >
+        </li>
+        <!--   
+        <li><a href="./pages/terms-of-service.htm">سياسة الخصوصية</a></li>
+          -->
+      </ul>
+
+      <ul class="social-media">
+        <li class="twitter">
+          <a
+            href="https://twitter.com/DH_MUSEUM?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+        </li>
+        <li class="instagram">
+          <a
+            href="https://www.instagram.com/dh.museum/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </li>
+        <li class="youtube">
+          <a
+            href="https://www.youtube.com/channel/UC0kiPnZHjNfX61zTf6B6w5g"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </li>
+        <li class="tiktok">
+          <a
+            href="https://www.tiktok.com/@aldwihimuseum?lang=ar"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-tiktok"></i
+          ></a>
+        </li>
+        <li class="facebook">
+          <a target="_blank" href="https://www.facebook.com/soliman.aldwihi/"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+        </li>
+        <li class="pinterest">
+          <a
+            href="https://www.pinterest.com/soliman4137/_created/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-pinterest"></i
+          ></a>
+        </li>
+      </ul>
+      <div class="text">
+        <p>جميع الحقوق محفوظة &copy;</p>
+        <p>متحف الضويحي 2021 - 2024</p>
+
+        <!-- 
+        <p>
+          برمجة وتطوير
+          <a href="https://ahabfadl.com" target="_blank" rel="noopener noreferrer"
+            >Ahab</a
+          >
+        </p>
+        -->
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
