@@ -1,4 +1,4 @@
 # Adwihi museum in Saudi Arabia
 
-done for mobile 
+This website is for phone screens only
 https://adwihimuseum.com/
