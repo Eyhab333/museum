@@ -80,16 +80,18 @@ h2 {
 }
 
 /*##### for-phone-only ##########*/
-@media (max-width: 599px) {
+@media only screen and (max-width: 600px) {
   header {
     position: fixed;
     top: 0;
     z-index: 111;
     width: 100%;
-    background: black;
+    background: rgb(3, 3, 3);
     padding: 14px 33px;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     justify-content: space-around;
   }
   header .hide-on-mobile {
@@ -138,18 +140,6 @@ h2 {
     right: 45px;
     font-size: 60px;
   }
-}
-@media screen and (max-width: 599px) and (max-height: 450px) {
-  .overlay a {
-    font-size: 20px;
-  }
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-}
-@media (max-width: 599px) {
   main {
     background-color: black;
     color: whitesmoke;
@@ -200,7 +190,7 @@ h2 {
   }
   main .awards {
     position: relative;
-    padding-top: 291px;
+    padding-top: 91px;
   }
   main .awards .text {
     position: absolute;
@@ -264,7 +254,9 @@ h2 {
   }
   main .location .text .icon-and-info {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     justify-content: space-between;
     opacity: 0.8;
   }
@@ -340,26 +332,15 @@ h2 {
   }
 }
 /*############ for-tablet-portrait ##############*/
-@media (600px <= width <= 899px) {
-  header .icon-hamburger,
-  header .overlay {
-    display: none;
-  }
-}
-/*############ for-tablet-landscape #############*/
-@media (900px <= width <= 1199px) {
-  header .icon-hamburger,
-  header .overlay {
-    display: none;
-  }
-}
-/*############ for-desktop ###########*/
-@media (1200px <= width <= 1799px) {
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
   header {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     justify-content: space-around;
-    padding: 22px 120px 22px 120px;
+    padding: 2px 20px 2px 20px;
   }
   header .logo {
     max-width: 90px;
@@ -374,22 +355,15 @@ h2 {
     width: 45%;
   }
   main {
-    padding-left: 120px;
-    padding-right: 120px;
+    background-color: black;
+    color: whitesmoke;
+    padding: 2.75rem 0rem 4rem 0rem;
     text-align: center;
   }
-  main section + section {
-    margin-top: 7.125rem;
-  }
   main .hero {
-    border: 1px solid transparent;
     position: relative;
-    margin-bottom: 390px;
   }
   main .hero #myVideo {
-    position: absolute;
-    right: 0;
-    top: 0;
     min-width: 100%;
     min-height: 100%;
   }
@@ -424,7 +398,7 @@ h2 {
   }
   main .awards {
     position: relative;
-    padding-top: 291px;
+    padding-top: 91px;
   }
   main .awards .text {
     position: absolute;
@@ -488,7 +462,9 @@ h2 {
   }
   main .location .text .icon-and-info {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     justify-content: space-between;
     opacity: 0.8;
   }
@@ -527,13 +503,427 @@ h2 {
   }
   footer {
     background-color: transparent;
-    background-image: linear-gradient(180deg, rgb(0, 11, 14) 0%, rgb(0, 25, 34) 100%);
+    background-image: linear-gradient(180deg, rgb(0, 5, 5) 10%, rgb(0, 8, 10) 100%);
     color: whitesmoke;
     padding-top: 1.875rem;
     padding-bottom: 2.125rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  footer .logo {
+    max-width: 90px;
+    margin-bottom: 2.125rem;
+  }
+  footer .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.125rem;
+  }
+  footer .links li + li {
+    margin-top: 1.3125rem;
+  }
+  footer .social-media {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.1875rem;
+    margin-bottom: 34px;
+  }
+  footer .social-media li {
+    width: 90%;
+  }
+  footer .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/*############ for-tablet-landscape #############*/
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 22px 120px 22px 120px;
+  }
+  header .logo {
+    max-width: 90px;
+  }
+  header .icon-hamburger,
+  header .overlay {
+    display: none;
+  }
+  header ul {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+  }
+  main {
+    text-align: center;
+  }
+  main .hero {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  main .hero #myVideo {
+    min-width: 100%;
+    min-height: 100%;
+  }
+  main .hero .content {
+    position: absolute;
+    top: 20px;
+    background: rgba(0, 0, 25, 0.4);
+    box-shadow: 3px 3px 33px 13px rgba(0, 0, 5, 0.4);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 14px;
+    padding-top: 22px;
+  }
+  main .hero #myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  main .hero #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+  main .hero h1 {
+    margin-bottom: 1.875rem;
+  }
+  main .our-vision {
+    margin-top: 291px;
+    margin-bottom: 90px;
+  }
+  main .awards {
+    position: relative;
+    padding-bottom: 91px;
+  }
+  main .awards .text {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 25, 0.4);
+    box-shadow: 3px 3px 33px 13px rgba(0, 0, 5, 0.4);
+    width: 100%;
+    padding: 30px;
+  }
+  main .awards .text p {
+    font-weight: 500;
+    text-align: center;
+  }
+  main .awards h2 {
+    margin-bottom: 2rem;
+  }
+  main .awards picture + picture {
+    margin-top: 32px;
+  }
+  main .visits h2 {
+    margin-bottom: 32px;
+  }
+  main .articals {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .articals h2 {
+    margin-bottom: 25px;
+  }
+  main .articals .item + .item {
+    margin-top: 22px;
+  }
+  main .articals .item {
+    padding: 21px;
+    border: 0.5px solid gray;
+    border-radius: 15px;
+  }
+  main .articals .item p {
+    margin-bottom: 21px;
+    line-height: 30px;
+  }
+  main .articals .item a {
+    color: goldenrod;
+  }
+  main .location {
+    background-image: url(../assets/mobile/night-sky-left.png);
+    background-repeat: no-repeat;
+  }
+  main .location .text {
+    padding-left: 54px;
+    padding-right: 54px;
+    margin-bottom: 32px;
+    background: rgba(0, 0, 10, 0.4);
+    box-shadow: 3px 3px 33px 13px rgba(0, 0, 5, 0.4);
+  }
+  main .location .text h3 {
+    margin-bottom: 25px;
+  }
+  main .location .text .icon-and-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    opacity: 0.8;
+  }
+  main .location .text .icon-and-info + .icon-and-info {
+    margin-top: 22px;
+  }
+  main .location .google-map {
+    padding-bottom: 50%;
+    position: relative;
+  }
+  main .location .google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+  main .they-said h2 {
+    margin-bottom: 32px;
+  }
+  main .our-gouls {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .our-gouls h2 {
+    margin-bottom: 25px;
+  }
+  main .our-gouls p + p {
+    margin-top: 22px;
+  }
+  main .our-gouls p {
+    line-height: 34px;
+  }
+  footer {
+    background-color: transparent;
+    background-image: linear-gradient(180deg, rgb(0, 11, 14) 0%, rgb(0, 8, 10) 100%);
+    color: whitesmoke;
+    padding-top: 1.875rem;
+    padding-bottom: 2.125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .logo {
+    max-width: 120px;
+    margin-bottom: 2.125rem;
+  }
+  footer .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.125rem;
+  }
+  footer .links li + li {
+    margin-top: 1.3125rem;
+  }
+  footer .social-media {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.1875rem;
+    margin-bottom: 34px;
+  }
+  footer .social-media li {
+    width: 90%;
+  }
+  footer .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .text p {
+    text-align: center;
+  }
+}
+/*############ for-desktop ###########*/
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 22px 20px 22px 20px;
+  }
+  header .logo {
+    max-width: 90px;
+  }
+  header .icon-hamburger,
+  header .overlay {
+    display: none;
+  }
+  header ul {
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+  }
+  main {
+    padding: 1rem 0rem 4rem 0rem;
+    text-align: center;
+  }
+  main .hero #myVideo {
+    min-width: 100%;
+    min-height: 100%;
+  }
+  main .hero .content {
+    position: absolute;
+    top: 20px;
+    background: rgba(0, 0, 25, 0.4);
+    box-shadow: 3px 3px 33px 13px rgba(0, 0, 5, 0.4);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 14px;
+    padding-top: 22px;
+  }
+  main .hero #myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  main .hero #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+  main .hero h1 {
+    margin-bottom: 1.875rem;
+  }
+  main .our-vision {
+    margin-top: 291px;
+  }
+  main .awards {
+    margin-top: 91px;
+  }
+  main .awards .text {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 25, 0.4);
+    box-shadow: 3px 3px 33px 13px rgba(0, 0, 5, 0.4);
+    width: 100%;
+    padding: 30px;
+  }
+  main .awards .text p {
+    font-weight: 500;
+    text-align: center;
+  }
+  main .awards h2 {
+    margin-bottom: 2rem;
+  }
+  main .visits h2 {
+    margin-bottom: 32px;
+  }
+  main .articals {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .articals h2 {
+    margin-bottom: 25px;
+  }
+  main .articals .item + .item {
+    margin-top: 22px;
+  }
+  main .articals .item {
+    padding: 21px;
+    border: 0.5px solid gray;
+    border-radius: 15px;
+  }
+  main .articals .item p {
+    margin-bottom: 21px;
+    line-height: 30px;
+  }
+  main .articals .item a {
+    color: goldenrod;
+  }
+  main .location {
+    margin-top: 33px;
+    background-image: url(../assets/mobile/night-sky-left.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  main .location .text {
+    padding-left: 54px;
+    padding-right: 54px;
+    margin-bottom: 32px;
+    background: rgba(0, 0, 10, 0.4);
+    box-shadow: 3px 3px 33px 13px rgba(0, 0, 5, 0.4);
+  }
+  main .location .text h3 {
+    margin-bottom: 25px;
+    font-size: 45px;
+  }
+  main .location .text .icon-and-info {
+    display: inline-block;
+    justify-content: space-around;
+    opacity: 0.8;
+  }
+  main .location .text .icon-and-info + .icon-and-info {
+    margin-top: 0px;
+    margin-right: 23px;
+  }
+  main .location .google-map {
+    padding-bottom: 50%;
+    position: relative;
+  }
+  main .location .google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+  main .they-said h2 {
+    margin-bottom: 32px;
+  }
+  main .our-gouls {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .our-gouls h2 {
+    margin-bottom: 25px;
+  }
+  main .our-gouls p + p {
+    margin-top: 22px;
+  }
+  main .our-gouls p {
+    line-height: 34px;
+  }
+  footer {
+    background-color: transparent;
+    background-image: linear-gradient(180deg, rgb(0, 3, 3) 0%, rgb(0, 6, 8) 100%);
+    color: whitesmoke;
+    padding-top: 1.875rem;
+    padding-bottom: 2.125rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
   }
   footer .logo {
     max-width: 120px;
@@ -655,7 +1045,7 @@ ul {
   font-size: 13px;
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-width: 450px) {
   .artifacts .sidenav {
     padding-top: 15px;
   }

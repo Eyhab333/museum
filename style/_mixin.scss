@@ -8,5 +8,7 @@
 // center stuff horizontally on mobile
 @mixin center-horizontally {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
