@@ -153,7 +153,6 @@ h2 {
     position: relative;
   }
   main .hero #myVideo {
-    position: absolute;
     right: 0;
     top: 0;
     min-width: 100%;
@@ -190,7 +189,6 @@ h2 {
   }
   main .awards {
     position: relative;
-    padding-top: 91px;
   }
   main .awards .text {
     position: absolute;
