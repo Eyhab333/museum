@@ -359,6 +359,9 @@ h2 {
     padding-top: toRem(30);
     padding-bottom: toRem(34);
     @include center-vertically;
+    ul {
+      padding-right: 0rem;
+    }
 
     .logo {
       max-width: 90px;
@@ -368,6 +371,7 @@ h2 {
     .links {
       @include center-vertically;
       margin-bottom: toRem(34);
+      
 
       li + li {
         margin-top: toRem(21);
@@ -379,6 +383,7 @@ h2 {
       grid-template-columns: 1fr 1fr 1fr;
       gap: toRem(35);
       margin-bottom: 34px;
+      
 
       li {
         width: 90%;
