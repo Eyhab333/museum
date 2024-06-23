@@ -1,6 +1,6 @@
 # Adwihi museum in Saudi Arabia
 
-Live URL: 
+Live Preview: 
 https://adwihimuseum.com/
 
 ## Description
