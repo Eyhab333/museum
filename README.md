@@ -1,5 +1,7 @@
 # Adwihi museum in Saudi Arabia
 
+Note: This site is a work in progress. If you see dummy text on a page, it means I'm still working on it.
+
 Live Preview: 
 https://adwihimuseum.com/
 
