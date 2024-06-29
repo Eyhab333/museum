@@ -615,7 +615,9 @@ h2 {
     padding-top: toRem(30);
     padding-bottom: toRem(34);
     @include center-vertically;
-
+    ul {
+      padding-right: 0rem;
+    }
     .logo {
       max-width: 90px;
       margin-bottom: toRem(34);
@@ -868,7 +870,9 @@ h2 {
     padding-top: toRem(30);
     padding-bottom: toRem(34);
     @include center-vertically;
-
+    ul {
+      padding-right: 0rem;
+    }
     .logo {
       max-width: 120px;
       margin-bottom: toRem(34);
@@ -1134,7 +1138,9 @@ h2 {
 
     @include center-horizontally;
     justify-content: space-around;
-
+    ul {
+      padding-right: 0rem;
+    }
     .logo {
       max-width: 120px;
       margin-bottom: toRem(34);
@@ -1179,7 +1185,7 @@ h2 {
 // }
 
 ul {
-  padding-left: 0px;
+  padding-right: 0rem;
 }
 
 

@@ -512,6 +512,9 @@ h2 {
     flex-direction: column;
     align-items: center;
   }
+  footer ul {
+    padding-right: 0rem;
+  }
   footer .logo {
     max-width: 90px;
     margin-bottom: 2.125rem;
@@ -718,6 +721,9 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  footer ul {
+    padding-right: 0rem;
   }
   footer .logo {
     max-width: 120px;
@@ -926,6 +932,9 @@ h2 {
     justify-content: center;
     justify-content: space-around;
   }
+  footer ul {
+    padding-right: 0rem;
+  }
   footer .logo {
     max-width: 120px;
     margin-bottom: 2.125rem;
@@ -959,7 +968,7 @@ h2 {
 }
 /*############ for-big-desktop ##########*/
 ul {
-  padding-left: 0px;
+  padding-right: 0rem;
 }
 
 /*
