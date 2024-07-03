@@ -765,7 +765,7 @@ h2 {
     align-items: center;
     justify-content: center;
     justify-content: space-around;
-    padding: 22px 20px 22px 20px;
+    padding: 22px 20px 2px 20px;
   }
   header .logo {
     max-width: 90px;
@@ -780,7 +780,7 @@ h2 {
     width: 35%;
   }
   main {
-    padding: 1rem 0rem 4rem 0rem;
+    padding: 0rem 0rem 4rem 0rem;
     text-align: center;
   }
   main .hero #myVideo {
@@ -789,13 +789,12 @@ h2 {
   }
   main .hero .content {
     position: absolute;
-    top: 20px;
-    background: rgba(0, 0, 25, 0.4);
-    box-shadow: 3px 3px 33px 13px rgba(0, 0, 5, 0.4);
+    top: 0px;
+    background: linear-gradient(180deg, rgba(85, 85, 85, 0.86), rgba(0, 0, 0, 0.86));
     color: #f1f1f1;
     width: 100%;
-    padding: 14px;
-    padding-top: 22px;
+    height: 100%;
+    padding-top: 122px;
   }
   main .hero #myBtn {
     width: 200px;
@@ -812,6 +811,13 @@ h2 {
   }
   main .hero h1 {
     margin-bottom: 1.875rem;
+    font-size: 5rem;
+    font-weight: 800;
+  }
+  main .hero p {
+    color: #f78f07;
+    font-size: 1rem;
+    font-weight: 800;
   }
   main .our-vision {
     margin-top: 291px;
@@ -989,7 +995,7 @@ ul {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(0, 13, 22);
+  background-color: rgb(0, 0, 0);
   overflow-x: hidden;
   padding-top: 20px;
   margin-top: 120px;
